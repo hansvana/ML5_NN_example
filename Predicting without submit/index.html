@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://unpkg.com/ml5@0.5.0/dist/ml5.min.js"></script>
+  <title>Pulse</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <form class="col s6">
+        <div class="row">
+          <div class="input-field col s12">
+            <input type="number" name="Active">
+            <label for="Active">Active pulse</label>
+          </div>
+          <div class="input-field col s12">
+            <input type="number" name="Rest">
+            <label for="Rest">Rest pulse</label>
+          </div>
+          <div class="input-field col s12">
+            <input type="number" name="Exercise">
+            <label for="Exercise">Amt. of Exercise</label>
+          </div>
+          <div class="input-field col s12">
+            <p>
+              <label><input type="radio" name="Gender" value="0" checked><span>Male</span></label>
+              <label><input type="radio" name="Gender" value="1"><span>Female</span></label>
+            </p>
+          </div>
+          <div class="input-field col s12">
+            <p>
+              <label><input type="radio" name="Smoke" value="0" checked><span>Non-smoker</span></label>
+              <label><input type="radio" name="Smoke" value="1"><span>Smoker</span></label>
+            </p>
+          </div>
+          <div class="input-field col s12">
+            <input type="number" name="Height">
+            <label for="">Height</label>
+          </div>
+          <div class="input-field col s12">
+            <a class="waves-effect waves-light btn" onclick="predict()">predict</a>
+          </div>
+        </div>
+      </form>
+      <div class="col s6">
+        <div class="card blue-grey darken-1">
+          <div class="card-content white-text">
+            <span class="card-title">
+              Result
+            </span>
+            <p id="result">Click 'predict'</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
